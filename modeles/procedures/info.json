@@ -1,0 +1,9 @@
+{
+  "nom": "Procédures attendues",
+  "cible": "num_procedures",
+  "algorithme": "Gradient boosting",
+  "metrique": "MAE",
+  "valeur": 0.948,
+  "auteur": "À compléter",
+  "port_api": 8001
+}
