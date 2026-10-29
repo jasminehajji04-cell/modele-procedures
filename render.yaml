@@ -1,0 +1,13 @@
+# Déploiement de l'API sur Render (Blueprint).
+# Render > New > Blueprint > choisir le dépôt GitHub : le service se crée tout seul.
+services:
+  - type: web
+    name: modele-procedures-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-api.txt
+    startCommand: gunicorn --chdir modeles/procedures --bind 0.0.0.0:$PORT --workers 1 --timeout 120 api:app
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3

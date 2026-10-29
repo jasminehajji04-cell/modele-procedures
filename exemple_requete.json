@@ -1,0 +1,8 @@
+{
+  "patient": {
+    "num_medications": 30,
+    "time_in_hospital": 10,
+    "age": "[70-80)",
+    "diag_1": "414"
+  }
+}
